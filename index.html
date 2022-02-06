@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -15,8 +15,22 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
-    <img src="images/museum.jpg" alt="placeholder">
+
+    <picture>
+      <source srcset="images/test/museum-ls-960-c.jpg 1x,
+                      images/test/museum-ls-1920-c.jpg 2x,
+                      images/test/museum-ls-2880-c.jpg 3x"
+              media="(max-width: 959px)"/>
+  
+      <source srcset="images/test/museum_sq-480-c.jpg,
+                      images/test/museum_sq-960-c.jpg 2x,
+                      images/test/museum_sq-1440-c.jpg 3x"
+              media="(min-width: 960px)"/>
+      <img 
+           src="images/compressed/museum-ls-1920-c-fallb.jpg"
+           alt="An art galary with armchairs and a man viewing art.">
+  </picture>
+
   </header>
 </body>
 
